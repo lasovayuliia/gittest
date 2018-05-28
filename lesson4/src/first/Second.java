@@ -9,10 +9,10 @@ public class Second {
     private static Snake snake1 = new Snake();
 
     public static void printLinked() {
-        System.out.println("Integer: " + int1);
-        System.out.println("String: " + str1);
-        System.out.println("String: " + str2);
-        System.out.println("Snake: " + String.valueOf(snake1.SnakesToParrot(3)) );
+        System.out.println(int1.getClass() + ", " + int1);
+        System.out.println(str1.getClass() + ", " + str1);
+        System.out.println(str2.getClass() + ", " + str2);
+        System.out.println(snake1.getClass() + ", " + String.valueOf(snake1.SnakesToParrot(3)) );
 
     }
 }
