@@ -21,7 +21,7 @@ public class Main {
         System.out.println("");
 
         System.out.println("Task 5:");
-        Fifth.summ("5");
+        Fifth.summ("97");
         System.out.println("");
     }
 }
