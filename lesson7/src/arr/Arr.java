@@ -23,6 +23,19 @@ public class Arr {
         return new int[]{min, max};
     }
 
+    public static int[] arrBubbleSortDesc(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 1; j < arr.length; j++) {
+                if (arr[j] > arr[j - 1]) {
+                    int buff = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = buff;
+                }
+            }
+        }
+        return arr;
+    }
+
     public static int[][] generateTwoArray(int row, int column) {
         int[][] arr = new int[row][column];
         for (int i = 0; i < row; i++) {
@@ -50,5 +63,24 @@ public class Arr {
             }
         }
         return summ;
+    }
+
+    public static String strConcat(String[] arr) {
+        String s = "";
+        for (String elem : arr) {
+                s = s.concat(elem);
+            }
+        return s;
+    }
+
+    public static String strConcatWithS(String[] arr) {
+        String s = "";
+        for (String elem : arr) {
+            if (elem.contains("S")) {
+                elem = elem.replace("S", "@");
+                s = s.concat(elem);
+            }
+        }
+        return s;
     }
 }
