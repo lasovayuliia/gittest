@@ -1,6 +1,9 @@
 package arr;
 
 import java.util.Arrays;
+import java.util.*;
+
+//import static java.lang.String.valueOf;
 
 public class Main {
 
@@ -31,7 +34,7 @@ public class Main {
 
         //task4
         System.out.println("Task 4:");
-        String[] arr4 = new String[]{"Save", "boss", "KISS", "lost", "MESS"};
+        String[] arr4 = {"Save", "boss", "KISS", "lost", "MESS"};
         System.out.println("String array: " + Arrays.toString(arr4));
         System.out.println("String concat: " + Arr.strConcat(arr4));
         System.out.println("String concat with S: " + Arr.strConcatWithS(arr4));
@@ -39,5 +42,30 @@ public class Main {
         //task5
         System.out.println("\nTask 5:");
 
+        /*Map<Integer, Phonebook> map = new HashMap<Integer, Phonebook>();
+        Phonebook code1 = new Phonebook("Ukraine",  "38");
+        Phonebook code2 = new Phonebook("Russia", "7");
+        Phonebook code3 = new Phonebook("Belarus",  "375");
+
+        map.put(1, code1);
+        map.put(2, code2);
+        map.put(3, code3);*/
+
+
+        String tel = "38-063-8383838";
+        String tel2 = "38-04622-56789";
+        String tel3 = "7-04622-56789";
+        String tel4 = "375-04622-56789";
+        UserNumber.parseNumber(tel);
+        UserNumber.parseNumber(tel2);
+        UserNumber.parseNumber(tel3);
+        UserNumber.parseNumber(tel4);
+        /*for (Map.Entry<Integer, Phonebook> entry : map.entrySet()) {
+            Phonebook p = entry.getValue();
+            if (tel.contains(p.code)) {
+                System.out.println("Country: " + p.country + "\nOperator: " + p.operator);
+                UserNumber u1 = new UserNumber(tel);
+            }
+        }*/
     }
 }
