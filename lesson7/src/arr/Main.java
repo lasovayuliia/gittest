@@ -1,14 +1,10 @@
 package arr;
 
 import java.util.Arrays;
-import java.util.*;
-
-//import static java.lang.String.valueOf;
 
 public class Main {
 
     public static void main(String[] args) {
-
         //task1
         System.out.println("Task 1:");
         int[] arr = Arr.generateArray(10);
@@ -33,7 +29,7 @@ public class Main {
         System.out.println("Sorted array: " + Arrays.toString(arrSorted));
 
         //task4
-        System.out.println("Task 4:");
+        System.out.println("\nTask 4:");
         String[] arr4 = {"Save", "boss", "KISS", "lost", "MESS"};
         System.out.println("String array: " + Arrays.toString(arr4));
         System.out.println("String concat: " + Arr.strConcat(arr4));
@@ -41,31 +37,17 @@ public class Main {
 
         //task5
         System.out.println("\nTask 5:");
-
-        /*Map<Integer, Phonebook> map = new HashMap<Integer, Phonebook>();
-        Phonebook code1 = new Phonebook("Ukraine",  "38");
-        Phonebook code2 = new Phonebook("Russia", "7");
-        Phonebook code3 = new Phonebook("Belarus",  "375");
-
-        map.put(1, code1);
-        map.put(2, code2);
-        map.put(3, code3);*/
-
-
-        String tel = "38-063-8383838";
-        String tel2 = "38-04622-56789";
-        String tel3 = "7-04622-56789";
-        String tel4 = "375-04622-56789";
-        UserNumber.parseNumber(tel);
-        UserNumber.parseNumber(tel2);
-        UserNumber.parseNumber(tel3);
-        UserNumber.parseNumber(tel4);
-        /*for (Map.Entry<Integer, Phonebook> entry : map.entrySet()) {
-            Phonebook p = entry.getValue();
-            if (tel.contains(p.code)) {
-                System.out.println("Country: " + p.country + "\nOperator: " + p.operator);
-                UserNumber u1 = new UserNumber(tel);
-            }
-        }*/
+        String tel = "375-17-8383838";
+        String tel2 = "375-25-2562789";
+        String tel3 = "7-495-567891";
+        String tel4 = "380-44-5678900";
+        String tel5 = "0-44-5678900";
+        String tel6 = "7-44-5678900";
+        Phonebook.parseNumber(tel);
+        Phonebook.parseNumber(tel2);
+        Phonebook.parseNumber(tel3);
+        Phonebook.parseNumber(tel4);
+        Phonebook.parseNumber(tel5);
+        Phonebook.parseNumber(tel6);
     }
 }
