@@ -11,7 +11,7 @@ class UserNumber {
     }
 
     public void print() {
-        System.out.println("\n-----" +
+        System.out.println("-----" +
                 "\nNumber:\t" + number +
                 "\nCountry:\t" + country +
                 "\nCity or operator:\t" + city +
