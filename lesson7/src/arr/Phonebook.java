@@ -57,7 +57,7 @@ class Phonebook {
     }
 
     public static void parseNumber(String number) {
-        String pattern = "([1-9][0-9]{0,2})-([0-9]{1,5})-([0-9]{5,7})";
+        String pattern = "[1-9]\\d{0,2}-\\d{1,5}-\\d{5,7}";
         if (number.matches(pattern)) {
             try {
                 String[] num = number.split("-");
