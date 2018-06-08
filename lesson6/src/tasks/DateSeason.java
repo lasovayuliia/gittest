@@ -21,14 +21,19 @@ public class DateSeason {
 
         int monthInt = randomDate.getMonthValue();
         String season = "";
-        if (monthInt >= 9 && monthInt <= 11) {
-            season = "Autumn";
-        } else if (monthInt >= 3 && monthInt <= 5) {
-            season = "Spring";
-        } else if (monthInt >= 6 && monthInt <= 8) {
-            season = "Summer";
-        } else {
-            season = "Winter";
+        switch (monthInt) {
+            case 3: case 4: case 5:
+                season = "Spring";
+                break;
+            case 6: case 7: case 8:
+                season = "Summer";
+                break;
+            case 9: case 10: case 11:
+                season = "Autumn";
+                break;
+            case 1: case 2: case 12:
+                season = "Winter";
+            default: System.out.println("Wrong month");
         }
 
         System.out.println(date);
