@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args){
         //taks 1
-        //MinMax.first();
+        MinMax.first();
 
         //task 2
         System.out.println("\nTask 2:");
