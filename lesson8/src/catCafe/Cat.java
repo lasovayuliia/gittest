@@ -2,62 +2,52 @@ package catCafe;
 
 public class Cat {
     private String name;
-    private String sex;
+    private static gender gender;
     private String breed;
-    private boolean catCafeFlag;
+    private static location location;
 
-    Cat(String name, String sex, String breed, boolean catCafeFlag) {
+    public enum location {cafe, home}
+
+    public enum gender {Male, Female}
+
+    Cat(String name, gender gender, String breed, location location) {
         this.name = name;
-        this.sex = sex;
         this.breed = breed;
-        this.catCafeFlag = catCafeFlag;
+        Cat.gender = gender;
+        Cat.location = location;
     }
 
     Cat() {
         this.name = "Fluffy";
-        this.sex = "Male";
+        gender = Cat.gender.Male;
         this.breed = "Unknown";
-        this.catCafeFlag = true;
+        location = Cat.location.home;
     }
 
-    Cat(String name, String sex) {
+    Cat(String name, gender gender) {
         this.name = name;
-        this.sex = sex;
+        Cat.gender = gender;
         this.breed = "Unknown";
-        this.catCafeFlag = true;
+        location = Cat.location.cafe;
     }
 
-    private boolean getCatCafeFlag() {
-        return catCafeFlag;
+    public location getLocation() {
+        return location;
     }
 
-    private void setCatCafeFlagFalse() {
-        this.catCafeFlag = false;
-    }
-
-    private void setCatCafeFlagTrue() {
-        this.catCafeFlag = true;
+    public void setLocation(location location) {
+        Cat.location = location;
     }
 
     public String getCatName() {
         return name;
     }
 
-    public String getCatSex() {
-        return sex;
+    public gender getCatGender() {
+        return gender;
     }
 
     public String getCatBreed() {
         return breed;
     }
-
-    public void goHome() {
-        setCatCafeFlagFalse();
-    }
-
-    public void goToCafe() {
-        setCatCafeFlagTrue();
-    }
-
-
 }

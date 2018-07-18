@@ -11,8 +11,8 @@ public class CatCafe {
         this.catArr = catArr;
         this.catCnt = catArr.length;
 
-        for (int i = 0; i < catCnt; i++) {
-            catArr[i].goToCafe();
+        for (Cat cat : catArr) {
+            cat.setLocation(Cat.location.cafe);
         }
     }
 
@@ -29,7 +29,7 @@ public class CatCafe {
         for (int i = 0; i < catCnt; i++) {
             System.out.println("Name: " + catArr[i].getCatName() +
                     ", Breed: " + catArr[i].getCatBreed() +
-                    ", Sex: " + catArr[i].getCatSex());
+                    ", Gender: " + catArr[i].getCatGender());
         }
         System.out.println("-----");
     }
@@ -40,7 +40,7 @@ public class CatCafe {
         for (int i = 0; i < catCnt; i++) {
             if (catArr[i].getCatBreed().equals(breed)) {
                 System.out.println("Name: " + catArr[i].getCatName() +
-                        ", Sex: " + catArr[i].getCatSex());
+                        ", Gender: " + catArr[i].getCatGender());
             }
         }
         System.out.println("-----");
