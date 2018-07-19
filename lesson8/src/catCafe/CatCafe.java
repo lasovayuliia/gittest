@@ -45,4 +45,17 @@ public class CatCafe {
         }
         System.out.println("-----");
     }
+
+    public void takeHome(Cat cat) {
+        Cat[] arr1 = new Cat[catCnt - 1];
+        int j = 0;
+        for (int i = 0; i < catCnt; i++) {
+            if (catArr[i] != cat) {
+                arr1[j] = catArr[i];
+                j++;
+            }
+        }
+        catArr = arr1;
+        this.catCnt = catArr.length;
+    }
 }
