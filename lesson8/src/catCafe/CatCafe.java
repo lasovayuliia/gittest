@@ -1,5 +1,7 @@
 package catCafe;
 
+import Animals.Cat;
+
 public class CatCafe {
     private String address, workTime;
     private Cat[] catArr;
@@ -46,13 +48,15 @@ public class CatCafe {
         System.out.println("-----");
     }
 
-    public void takeHome(Cat cat) {
+    public void takeHome(Cat cat, Person person) {
         Cat[] arr1 = new Cat[catCnt - 1];
         int j = 0;
         for (int i = 0; i < catCnt; i++) {
             if (catArr[i] != cat) {
                 arr1[j] = catArr[i];
                 j++;
+            } else {
+                catArr[i].setOwner(person);
             }
         }
         catArr = arr1;
