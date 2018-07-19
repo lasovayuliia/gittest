@@ -50,7 +50,10 @@ public class CatCafe {
         Cat[] arr1 = new Cat[catCnt - 1];
         int j = 0;
         for (int i = 0; i < catCnt; i++) {
-            if (catArr[i] != cat) {
+            if (catArr[i] == cat) {
+                cat.setLocation(Cat.location.home);
+            }
+                else {
                 arr1[j] = catArr[i];
                 j++;
             }
