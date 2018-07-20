@@ -48,7 +48,7 @@ public class CatCafe {
         System.out.println("-----");
     }
 
-    public void takeHome(Cat cat, Person person) {
+    public void takeHome(Cat cat, Person person, String name) {
         Cat[] arr1 = new Cat[catCnt - 1];
         int j = 0;
         for (int i = 0; i < catCnt; i++) {
@@ -57,6 +57,7 @@ public class CatCafe {
                 j++;
             } else {
                 catArr[i].setOwner(person);
+                person.setPet(catArr[i], name);
             }
         }
         catArr = arr1;

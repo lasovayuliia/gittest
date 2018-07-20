@@ -1,40 +1,59 @@
 package catCafe;
 
-import Animals.Cat;
-import Animals.Dog;
-import Animals.Jynx;
-import Animals.Pet;
+import Animals.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Person person1 = new Person("Yuliia", "Lasova", 24);
+        Person person1 = new Person("Yuliia", "Lasova", 24, null);
+        Person person2 = new Person("Alex", "Green", 22, null);
+        Person person3 = new Person("Olga", "Black", 32, null);
 
         Cat cat1 = new Cat("Funny", 1, "brittish", Pet.gender.Female, Cat.location.home, person1);
-        Cat cat2 = new Cat("Fujy", Pet.gender.Male);
+        Cat cat2 = new Cat("Kitty", Pet.gender.Male);
         Cat cat3 = new Cat();
-//        Cat cat4 = new Cat("Gyzmo", Cat.gender.Female, "British", Cat.location.home);
-//        Cat cat5 = new Cat("Luna", Cat.gender.Female, "Unknown", Cat.location.home);
-//        Cat cat6 = new Cat("Black", Cat.gender.Male, "British", Cat.location.home);
-//        Cat cat7 = new Cat("Whity", Cat.gender.Male, "British", Cat.location.cafe);
+
+        //Cat info
         System.out.println(cat1.info());
         System.out.println(cat2.toString());
 
+        System.out.println("Person without cat: " + person1.toString());
+
+        //Cat Cafe implementation
         Cat[] catArr1 = {cat1, cat2, cat3};
         CatCafe cafeWithYuliia = new CatCafe("Minsk", "Mon-Fri 9:00-17:00", catArr1);
+
+        //Cat info from Cat Cafe
         cafeWithYuliia.printAllCats();
         cafeWithYuliia.printByBreed("British");
-        cafeWithYuliia.takeHome(cat2, person1);
+
+        //Cat is taken home
+        cafeWithYuliia.takeHome(cat2, person1, "Fujii");
+        System.out.println("Person with cat: " + person1.toString());
 
         System.out.println(cat2.toString());
         cafeWithYuliia.printAllCats();
 
+        //Few new dogs
         Dog dog1 = new Dog();
-        System.out.println(dog1.info());
+        Dog dog2 = new Dog("Nobody", 2, Pet.gender.Male, null, "Husky");
+        System.out.println(dog2.info());
 
-        Jynx jynx1 = new Jynx();
-        System.out.println(jynx1.info());
+//        Jynx jynx1 = new Jynx();
+//        System.out.println(jynx1.info());
+
+        //Dog is taken home
+        person2.setPet(dog2, "Lucky");
+        System.out.println("Person with dog: " + person2.toString());
+        System.out.println(dog2.toString());
+
+        //One new parrot and giving it owner
+        Parrot parrot1 = new Parrot();
+        person3.setPet(parrot1, "Binky");
+        System.out.println(parrot1.info());
+        System.out.println(person3.toString());
+
 
 
     }

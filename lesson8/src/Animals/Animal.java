@@ -1,10 +1,8 @@
 package Animals;
 
-public abstract class Animal {
+public interface Animal {
 
-    public abstract String speak();
+    String speak();
 
-    public String info() {
-        return this.getClass() + "\nSound: " + this.speak();
-    }
+    String info();
 }

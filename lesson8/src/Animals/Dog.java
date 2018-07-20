@@ -22,4 +22,15 @@ public class Dog extends Pet {
     public String speak() {
         return "Bark";
     }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", gender=" + gender +
+                ", age=" + age +
+                ", breed='" + breed + '\'' +
+                '}';
+    }
+
 }

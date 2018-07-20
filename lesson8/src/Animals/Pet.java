@@ -2,11 +2,11 @@ package Animals;
 
 import catCafe.Person;
 
-public abstract class Pet extends Animal {
+public abstract class Pet implements Animal {
     protected Pet() {
     }
 
-    public enum gender {Male, Female;}
+    public enum gender {Male, Female}
 
     protected gender gender;
     public String name;
@@ -22,7 +22,7 @@ public abstract class Pet extends Animal {
 
     public String info() {
         return "Pet's name: " + name + "\n" +
-                super.info() +
+                this.getClass() + "\nSound: " + this.speak() +
                 "\n----";
     }
 
@@ -33,4 +33,5 @@ public abstract class Pet extends Animal {
     public void setOwner(Person owner) {
         this.owner = owner;
     }
+
 }

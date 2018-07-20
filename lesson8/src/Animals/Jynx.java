@@ -1,6 +1,6 @@
 package Animals;
 
-public class Jynx extends Animal {
+public class Jynx implements Animal {
 
     public Jynx() {
 
@@ -9,5 +9,10 @@ public class Jynx extends Animal {
     @Override
     public String speak() {
         return "Arrr";
+    }
+
+    @Override
+    public String info() {
+        return null;
     }
 }

@@ -6,7 +6,7 @@ public class Cat extends Pet {
     private String breed;
     protected location location;
 
-    public enum location {cafe, home;}
+    public enum location {cafe, home}
 
     public Cat(String name, int age, String breed, gender gender, location location, Person owner) {
         super(name, age, gender, owner);
@@ -35,11 +35,11 @@ public class Cat extends Pet {
     @Override
     public String toString() {
         return "Cat{" +
-                "breed='" + breed + '\'' +
-                ", location=" + location +
+                "name='" + name + '\'' +
                 ", gender=" + gender +
-                ", name='" + name + '\'' +
                 ", age=" + age +
+                ", breed='" + breed + '\'' +
+                ", location=" + location +
                 '}';
     }
 
