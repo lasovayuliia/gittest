@@ -2,16 +2,19 @@ package catCafe;
 
 import Animals.Pet;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Person {
     private String firstName, lastName;
     private int age;
-    private Pet pet;
+    private Map<String, Pet> petMap;
 
-    Person(String firstName, String lastName, int age, Pet pet) {
+    Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.pet = pet;
+        this.petMap = new HashMap<>();
     }
 
     public String getFirstName() {
@@ -38,14 +41,14 @@ public class Person {
         this.age = age;
     }
 
-    public Pet getPet() {
-        return pet;
+    public Map<String, Pet> getPetMap() {
+        return petMap;
     }
 
     public void setPet(Pet pet, String name) {
-        this.pet = pet;
         pet.name = name;
         pet.setOwner(this);
+        petMap.put(pet.name, pet);
     }
 
     @Override
@@ -54,7 +57,7 @@ public class Person {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
-                ", pet=" + pet +
+                ", pet=" + petMap +
                 '}';
     }
 

@@ -46,7 +46,6 @@ public class Cat extends Pet {
     @Override
     public String speak() {
         return "Meow";
-
     }
 
     public location getLocation() {
