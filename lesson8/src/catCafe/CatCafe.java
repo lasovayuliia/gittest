@@ -70,10 +70,9 @@ public class CatCafe {
         this.catCnt = catList.size();
     }
 
-    public void takeHomeLeaveInfo(Cat cat, Person person, String name) {
-        if (cat.getLocation().equals(Cat.location.home)) {
-            System.out.println("Cat is already at home!");
-        } else {
+    public void takeHomeLeaveInfo(Cat cat, Person person, String name) throws MyException {
+        if (cat.getLocation().equals(Cat.location.home)) throw new MyException();
+        else {
             for (int i = 0; i < catCnt; i++) {
                 Cat c = catList.get(i);
                 if (c == cat) {

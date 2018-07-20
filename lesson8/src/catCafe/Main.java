@@ -1,6 +1,7 @@
 package catCafe;
 
 import Animals.*;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -27,7 +28,6 @@ public class Main {
         //Few new dogs
         Dog dog1 = new Dog();
         Dog dog2 = new Dog("Nobody", 2, Pet.gender.Male, null, "Husky");
-//        System.out.println(dog2.info());
 
         //Dog is taken home
         person2.setPet(dog2, "Lucky");
@@ -39,8 +39,17 @@ public class Main {
         System.out.println("Person without pets: " + person1.toString());
 
         //Cat is taken home, but info is still saved in Cafe
-        cafeWithYuliia.takeHomeLeaveInfo(cat2, person1, "Fujii");
-        cafeWithYuliia.takeHomeLeaveInfo(cat2, person2, "Kate");
+        try {
+            cafeWithYuliia.takeHomeLeaveInfo(cat2, person1, "Fujii");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            cafeWithYuliia.takeHomeLeaveInfo(cat2, person2, "Kate");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         person1.setPet(dog1, "Lucy");
         person1.setPet(parrot1, "Coco");
